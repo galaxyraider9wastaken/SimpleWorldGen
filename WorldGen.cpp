@@ -3,6 +3,12 @@
 #include <ctime>
 #include <string> 
 
+//Length is the length of the array 
+//width is the width of the array
+//Denisty is the number of hills/noticable height diffrences
+//SpreadChancex is the chance for it to spread in the x axis
+//SpreadChancey is the chance for it to spread in the y axis
+//Runtime is the amount of times it adds to the hills recommended is 10 - 30 depending on how much hill you want
 void CreateHeightMap(int length, int width, int Density, int SpreadChancex, int SpreadChancey, int RunTime){
   SpreadChancex += SpreadChancey;
   int HeightMap[length][width];

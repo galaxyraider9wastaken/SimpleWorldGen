@@ -15,28 +15,28 @@ void CreateHeightMap(int length, int width, int Density, int RunTime, int jagged
       for(int i2=0;i2<width;i2++){
         if(HeightMap[i1][i2] >= 1){
           int ran = (rand() % 100) + 1;
-            int ran1 = (rand() % 4) +1;
-            if(i1 -1 >= 0 && i1 +1 < length && i2 -1 >= 0 && i2 +1 < width){
-              if(ran1 == 1){
-                if(HeightMap[i1-1][i2] <= HeightMap[i1][i2] + 1){
-                  HeightMap[i1-1][i2] +=jagged;
-                }
+          int ran1 = (rand() % 4) +1;
+          if(i1 -1 >= 0 && i1 +1 < length && i2 -1 >= 0 && i2 +1 < width){
+            if(ran1 == 1){
+              if(HeightMap[i1-1][i2] <= HeightMap[i1][i2] + 1){
+                HeightMap[i1-1][i2] +=jagged;
               }
-              if(ran1 == 2){
-                if(HeightMap[i1+1][i2] <= HeightMap[i1][i2] + 1){
-                  HeightMap[i1+1][i2] +=jagged;
-                }
+           }
+           if(ran1 == 2){
+              if(HeightMap[i1+1][i2] <= HeightMap[i1][i2] + 1){
+                HeightMap[i1+1][i2] +=jagged;
               }
-              if(ran1 == 3){
-                if(HeightMap[i1][i2-1] <= HeightMap[i1][i2] + 1){
-                  HeightMap[i1][i2-1] +=jagged;
-                }
+            }
+            if(ran1 == 3){
+              if(HeightMap[i1][i2-1] <= HeightMap[i1][i2] + 1){
+                HeightMap[i1][i2-1] +=jagged;
               }
-              if(ran1 == 4){
-                if(HeightMap[i1][i2+1] <= HeightMap[i1][i2] + 1){
-                  HeightMap[i1][i2+1] +=jagged;
-                }
+            }
+            if(ran1 == 4){
+              if(HeightMap[i1][i2+1] <= HeightMap[i1][i2] + 1){
+                HeightMap[i1][i2+1] +=jagged;
               }
+            }
           }
         }
       }
